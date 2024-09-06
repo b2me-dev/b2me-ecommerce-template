@@ -11,22 +11,22 @@
 									</div>
 									<ul class="footer-smi">
 										<li>
-											<a href="https://www.facebook.com/b2memarketing/" title="Facebook" target="_blank">
+											<a href="#" title="Facebook" target="_blank">
 												<i class="fa-brands fa-facebook-f"></i>
 											</a>
 										</li>
 										<li>
-											<a href="https://www.instagram.com/b2memarketing/" title="Instagram" target="_blank">
+											<a href="#" title="Instagram" target="_blank">
 												<i class="fa-brands fa-instagram"></i>
 											</a>
 										</li>
 										<li>
-											<a href="https://au.linkedin.com/company/b2me-marketing" title="Linkedin" target="_blank">
+											<a href="#" title="Linkedin" target="_blank">
 												<i class="fa-brands fa-linkedin-in"></i>
 											</a>
 										</li>
 										<li>
-											<a href="https://www.youtube.com/@B2Me-Marketing" title="YouTube" target="_blank">
+											<a href="#" title="YouTube" target="_blank">
 												<i class="fa-brands fa-youtube"></i>
 											</a>
 										</li>
@@ -66,30 +66,9 @@
 								<div class="b2-col col-5">
 									<div class="footer-form">
 										<h4>JOIN OUR NEWSLETTER</h4>
-										<p>Unlock Exclusive Discounts and Exciting Offers: Subscribe to Our Women’s Healthcare E-commerce Newsletter!</p>
+										<p>Unlock Exclusive Discounts and Exciting Offers: Subscribe to Our Women's Healthcare E-commerce Newsletter!</p>
 										<div class="footer-cf">
-											
-	<div class="wpcf7 js" id="wpcf7-f147-o1" lang="en-AU" dir="ltr">
-	<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-	<form action="/products/#wpcf7-f147-o1" method="post" class="wpcf7-form use-floating-validation-tip init" aria-label="Contact form" novalidate="novalidate" data-status="init">
-	<div style="display: none;">
-	<input type="hidden" name="_wpcf7" value="147">
-	<input type="hidden" name="_wpcf7_version" value="5.8.7">
-	<input type="hidden" name="_wpcf7_locale" value="en_AU">
-	<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f147-o1">
-	<input type="hidden" name="_wpcf7_container_post" value="0">
-	<input type="hidden" name="_wpcf7_posted_data_hash" value="">
-	</div>
-	<div class="footer-cf-cf-field">
-		<p><span class="wpcf7-form-control-wrap" data-name="emailaddress"><input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" id="emailaddress" aria-required="true" aria-invalid="false" placeholder="Email Address*" value="" type="email" name="emailaddress"></span>
-		</p>
-	</div>
-	<div class="form-cf-submit b2-text-center">
-		<p><button class="wpcf7-submit b2-link">Send Me Offers</button>
-		</p>
-	</div><input type="hidden" class="wpcf7-pum" value="{&quot;closepopup&quot;:false,&quot;closedelay&quot;:0,&quot;openpopup&quot;:false,&quot;openpopup_id&quot;:0}"><div class="wpcf7-response-output" aria-hidden="true"></div>
-	</form>
-	</div>
+											[Form Shortcode Here]
 										</div>
 									</div>
 								</div>
@@ -100,7 +79,7 @@
 						<div class="b2-inner-content">
 							<div class="b2-row">
 								<div class="b2-col col-6">
-									<p class="footer-copyright">© Copyright <a href="https://www.b2me.marketing/" target="_blank" class="b2-text-underline">B2Me Marketing</a> | B2Me Marketing - eCommerce Website Template</p>
+									<p class="footer-copyright">&copy; Copyright <?= date('Y'); ?><a href="#" target="_blank" class="b2-text-underline">Website Name</a> | Website by <a href="https://b2me.marketing/" target="_blank" class="b2me">B2Me Marketing</a></p>
 								</div>
 								<div class="b2-col col-6">
 									<img src="/wp-content/uploads/2023/05/payment-options.png" alt="payment-options" class="b2-img-responsive">
