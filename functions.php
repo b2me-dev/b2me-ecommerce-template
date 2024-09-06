@@ -149,8 +149,7 @@ function b2me_master_theme_scripts() {
 	wp_enqueue_style( 'b2me-slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css' );
 
 	// Main CSS
-	// wp_enqueue_style( 'b2me-global-style', 'https://resources.b2me.marketing/assets/css/global.css', array(), null);
-	wp_enqueue_style( 'b2me-global-style2', get_stylesheet_directory_uri() . '/global.css', array(), null);
+	wp_enqueue_style( 'b2me-global-style2', get_stylesheet_directory_uri() . '/css/global.css', array(), null);
 	wp_enqueue_style( 'b2me-master-theme-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/stylus/style.css?v=45');
 
@@ -161,8 +160,7 @@ function b2me_master_theme_scripts() {
 	wp_enqueue_script( 'b2me-aos', 'https://unpkg.com/aos@next/dist/aos.js', ['jquery']);
 
 	// Main JS
-	// wp_enqueue_script( 'b2me-global-scripts', 'https://resources.b2me.marketing/assets/js/global.js', ['jquery'], null);
-	wp_enqueue_script( 'b2me-global-scripts2', get_stylesheet_directory_uri() . '/global.js', ['jquery'], null);
+	wp_enqueue_script( 'b2me-global-scripts2', get_stylesheet_directory_uri() . '/js/global.js', ['jquery'], null);
 	wp_enqueue_script( 'shortcodes-scripts', get_stylesheet_directory_uri() . '/js/shortcodes.js', ['jquery']);
 	wp_enqueue_script( 'main-scripts', get_stylesheet_directory_uri() . '/js/app.js?v=6', ['jquery']);
 
@@ -234,88 +232,3 @@ function change_comment_form_title( $defaults ) {
     return $defaults;
 }
 add_filter( 'comment_form_defaults', 'change_comment_form_title' );
-
-if (!function_exists('b2me_log')) {
-    /**
-     * Log the data to a specified file within the theme.
-     *
-     * @param string $log_filename
-     * @param mixed ...$data
-     */
-    function b2me_log($log_filename = 'log', ...$data)
-    {
-        if (empty($data)) {
-            error_log('b2me_log: No data provided.');
-            return;
-        }
-
-        $file = get_template_directory() . '/logs/' . $log_filename . '.' . date('Ymd') . '.log';
-
-        $log_file = fopen($file, 'a');
-        if (!$log_file) {
-            error_log('b2me_log: Unable to open log file.');
-            return;
-        }
-
-        $content = '[' . date('Y-m-d H:i:s e') . '] ';
-
-        $current_user = wp_get_current_user();
-
-        if ($current_user->exists()) {
-            $content .= '[' . $current_user->user_login . '] ';
-        }
-
-        foreach ($data as $data_item) {
-            if (is_array($data_item) || is_object($data_item)) {
-                $content .= var_export($data_item, true) . "\n";
-            } else {
-                $content .= $data_item . "\n";
-            }
-        }
-
-        if (fwrite($log_file, $content) === false) {
-            error_log('b2me_log: Error writing to log file.');
-        }
-
-        fclose($log_file);
-    }
-}
-
-add_action('gform_after_submission', 'create_log_file', 10, 2);
-function create_log_file($entry, $form) {
-    $field_submissions = array();
-
-    foreach ($form['fields'] as $field) {
-        $field_label = !empty($field['label']) ? $field['label'] : $field['name']; 
-        
-        if ($field_label == 'Name') {
-            $field_value = '';
-            foreach ($field['inputs'] as $input) {
-                $input_id = $input['id'];
-                $input_value = rgar($entry, $input_id);
-                $field_value .= $input_value . ' ';
-            }
-            $field_value = trim($field_value);
-        } elseif ($field_label == 'Address') {
-            $field_value = '';
-            foreach ($field['inputs'] as $input) {
-                $input_id = $input['id'];
-                $input_value = rgar($entry, $input_id);
-                
-                if (!empty($input_value)) {
-                    $field_value .= $input_value . ', ';
-                }
-            }
-            $field_value = rtrim($field_value, ', '); 
-        } else {
-            $field_id = $field['id'];
-            $field_value = rgar($entry, $field_id);
-        }
-
-		if (!empty($field_value)) {
-            $field_submissions[$field_label] = $field_value;
-        }
-    }
-    
-    b2me_log('dynamics-request', $field_submissions);
-}
