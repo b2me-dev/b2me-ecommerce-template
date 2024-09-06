@@ -187,12 +187,6 @@
 							</div>
 							<div class="b2-col col-2 b2-text-right">
 								<ul class="header-links">
-									<!-- <li>
-										<a href="#" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
-									</li>
-									<li>
-										<a href="#" title="Favorites"><i class="fa-regular fa-heart"></i></a>
-									</li> -->
 									<li>
 										<i class="fa-solid fa-cart-shopping"></i>
 										<?php
