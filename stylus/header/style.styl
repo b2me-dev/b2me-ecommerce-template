@@ -1,0 +1,111 @@
+header
+	position fixed
+	top: 0
+	left: 0
+	width: 100%
+	background-color: #fff
+	box-shadow: 0 0 20px rgba(0,0,0,.08)
+	z-index 100
+
+	.header-promo-banner
+		position relative
+		font-size: 1.25rem
+		font-family: subheading-font
+		font-style: italic
+		padding: 4px 0
+		background-color: dark-color
+
+		p
+			font-family: inherit
+			font-size: inherit
+			margin: 0
+
+	.header-main
+		padding: 32px 0
+
+		.main-navigation
+			display: flex
+			align-items: center
+			justify-content: space-between
+
+			.header-logo img
+				max-height: 60px
+
+			.headernav
+				position relative
+
+				> li
+					position relative
+					display: inline-block
+					vertical-align: middle
+					margin 0 24px
+
+					&:hover
+						> a
+							opacity .8
+
+						.sub-menu
+							opacity 1
+							pointer-events: auto
+
+					> a
+						font-size: 1.125rem
+						color: dark-color
+						text-transform: uppercase
+						letter-spacing: 0.1em
+						padding: 8px 0
+
+					.sub-menu
+						position absolute
+						top: 100%
+						left: 50%
+						transform: translateX(-50%)
+						min-width: 175px
+						padding-top: 52px
+						opacity 0
+						pointer-events: none
+						transition: all .4s ease-in-out
+
+						li
+							position relative
+
+							a
+								display: block
+								font-family: subheading-font
+								font-size: 1rem
+								color: #fff
+								padding: 16px 8px
+								background-color: accent-color
+								transition: all .4s ease-in-out
+
+								&:hover
+									color: accent-color
+									background-color: #fff
+
+		.header-links
+			li
+				position relative
+				display: inline-block
+				vertical-align: middle
+				margin-left: 16px
+
+				a
+					font-size: 1.125rem
+					color: dark-color
+
+				i
+					font-size: 1.125rem
+					color: #412624
+					position: absolute
+					left: -12px
+					top: 50%
+					transform: translateY(-50%)
+
+	ul
+		margin: 0
+		padding: 0
+		list-style: none
+
+.cart-contents
+	.amount
+		display none

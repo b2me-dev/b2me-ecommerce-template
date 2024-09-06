@@ -1,0 +1,1085 @@
+/* 
+	B2Me Custom Classes
+	Table of Contents
+	- html / body
+	- Homepage sections
+	- Innerpage sections
+*/
+html
+	font-size: default-font-size
+	-webkit-text-size-adjust: 100%;
+
+body
+	font-family: paragraph-font;
+	font-weight: 400;
+	color: default-text-color;
+	line-height: site-line-height;
+	background-color: site-background;
+	margin: 0;
+
+/* Homepage */
+.home
+	main#primary
+		max-width 100%
+		padding: 0
+
+	article,
+	.entry-content,
+	ul,
+	p
+		margin: 0
+		padding: 0
+
+	ul
+		list-style: none
+
+/* Banner */
+.ecom-banner
+	padding: 165px 0 0
+	margin-bottom: -2px
+
+	canvas
+		display: block
+		width 100%
+		min-height: 450px
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+
+	.ecom-banner-txt
+		position absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width 100%
+
+		h1
+			color: #fff
+			letter-spacing: 0.2em
+			max-width: 810px
+			margin-bottom: 24px
+
+		p
+			font-size: 1.875rem
+			font-weight: 600
+			max-width: 760px
+
+		a
+			margin-right: 16px
+
+/* CTA */
+.ecom-cta
+	padding: 0
+
+	.b2-row
+		margin: 0
+
+	.col-3
+		width 25% !important;
+
+	a
+		display: block
+		position relative
+		overflow: hidden
+
+		&:hover
+			img
+				transform: scale(1.1)
+
+		&::before
+			content: ""
+			position absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: calc(100% - 30px)
+			height: calc(100% - 30px)
+			border: 1px solid #fff
+			pointer-events: none
+			z-index 2
+
+		&::after
+			content: ""
+			position absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: #000
+			opacity: .2
+			pointer-events: none
+			z-index 1
+
+		.ecom-cta-item
+			position relative
+
+			img
+				object-fit: cover
+				object-position: center
+				width 100%
+				height: 300px
+				transition: all .4s ease-in-out
+
+			p
+				position absolute
+				bottom: 42px
+				right 42px
+				font-size: 1.5rem
+				text-transform: uppercase
+				color: #fff
+				text-align: right
+				letter-spacing: 0.1em
+				line-height: 1
+				z-index 3
+
+				span
+					display block
+					font-family: cursive-font
+					font-size: 2.75rem
+					color: #fff
+					letter-spacing: 0
+					text-transform: capitalize
+					text-align: center
+					margin-bottom: -12px
+
+					&::first-letter
+						font-size: 3.375rem
+
+/* Collections */
+.ecom-collection
+	.ecom-collection-heading
+		margin-bottom: 32px
+
+		p
+			font-family: subheading-font
+			font-style: italic
+
+	.ecom-collection-list
+		position relative
+
+		> ul
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+
+			> li
+				width 50%
+				padding: 0 8px
+				margin-bottom: 16px
+
+				.ecom-collection-item
+					&:hover
+						.ecom-collection-item-img
+							img
+								opacity .1
+
+							.ecom-collection-item-options
+								top: 50%
+								opacity 1
+
+					.ecom-collection-item-img
+						position relative
+
+						> a
+							display block
+
+							img
+								object-fit: cover
+								object-position: center
+								margin: 0 auto
+								width auto
+								max-height: 215px
+								transition: all .4s ease-in-out
+
+						.ecom-collection-item-options
+							position absolute
+							top: 60%
+							left: 0
+							transform: translateY(-50%)
+							width 100%
+							text-align: center
+							opacity 0
+							transition: all .4s ease-in-out
+
+							li
+								display: inline-block
+								vertical-align: top
+
+								a
+									display: flex
+									justify-content: center
+									align-items: center
+									width: 32px
+									height: 32px
+									color: #000
+									border: 1px solid #000
+
+					.ecom-collection-item-dets
+						h4
+						h5
+							margin: 0
+
+						h5
+							font-family: subheading-font
+							font-style: italic
+							text-transform: capitalize
+
+/* Products */
+.ecom-products
+	.ecom-products-heading
+		margin-bottom: 32px
+
+		p
+			font-size: 1.25rem
+			font-family: subheading-font
+			font-style: italic
+			letter-spacing: 0.1em
+
+	.ecom-products-slide-wrap
+		position relative
+
+		.ecom-products-item
+			&:hover
+				.ecom-products-item-img
+					img
+						opacity .1
+
+					.ecom-products-item-options
+						top: 50%
+						opacity 1
+
+			.ecom-products-item-img
+				position relative
+
+				> a
+					display block
+
+					img
+						object-fit: cover
+						object-position: center
+						margin: 0 auto
+						max-height: 215px
+						transition: all .4s ease-in-out
+
+				.ecom-products-item-options
+					position absolute
+					top: 60%
+					left: 0
+					transform: translateY(-50%)
+					padding: 0
+					margin: 0
+					width 100%
+					text-align: center
+					opacity 0
+					transition: all .4s ease-in-out
+
+					li
+						display: inline-block
+						vertical-align: top
+
+						a
+							display: flex
+							justify-content: center
+							align-items: center
+							width: 32px
+							height: 32px
+							color: #000
+							border: 1px solid #000
+
+			.ecom-products-item-dets
+				h4
+				h5
+					margin: 0
+
+				h5
+					font-family: subheading-font
+					font-style: italic
+					text-transform: capitalize
+
+				p
+					font-size: 1.5rem
+					font-weight: 700
+					margin: 16px 0
+
+					&.striked
+						text-decoration: line-through
+						font-weight: 300
+						opacity: .7
+
+		.ecom-products-slide-arrows
+			display: flex
+			align-items: center
+			justify-content: space-between
+			position absolute
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+			width 100%
+
+			> div
+				font-size: 32px
+				color: accent-color
+				cursor: pointer
+				transition: all .4s ease-in-out
+
+				&:hover
+					opacity .6
+
+/* Video */
+.ecom-vid
+	padding: 0
+
+	a
+		display: block
+		position relative
+		
+		img
+			object-fit: cover
+			object-position: center
+
+		i
+			position absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 20px
+			color: #fff
+			width 52px
+			height: 52px
+			background-color: accent-color
+
+/* Featured 2 */
+.ecom-ftr
+	padding: 8.2% 0
+
+	canvas
+		position absolute
+		top 0
+		left: 0
+		width 100%
+		height: 100%
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		z-index -1
+
+	.ecom-ftr-txt
+		span
+			font-family: subheading-font
+			font-size: 1.25rem
+			font-style: italic
+			color: dark-color
+			letter-spacing: 0.1em
+
+		p
+			font-size: 1.125rem
+			color: dark-color
+			max-width: 450px
+			margin: 18px 0
+
+		del
+			font-size: 1.25rem
+			color: #707070
+
+		.price
+			font-size: 1.5rem
+			font-weight: 600
+			color: #fff
+			text-align: center
+			padding: 1em 0
+			background-color: accent-color
+			max-width: 155px
+			margin-top: 16px
+
+/* Category */
+.ecom-categ
+	padding: 124px 0
+
+	.ecom-categ-heading
+		margin-bottom: 32px
+
+		p
+			font-size: 1.25
+			font-family: subheading-font
+			font-style: italic
+			letter-spacing: 0.1em
+
+	.ecom-categ-item
+		padding-left: 18px
+		border-left: 2px solid accent-color
+
+		h3
+			color: accent-color
+			font-weight: 400
+			letter-spacing: 0.1em
+			margin-bottom: 16px
+
+		ul
+			li
+				margin-bottom: 16px
+
+				a
+					font-size: 1.25rem
+					color: dark-color
+
+/* Remiders */
+.ecom-reminders
+	padding: 5.2% 0
+	
+	canvas
+		position absolute
+		top 0
+		left: 0
+		width 100%
+		height: 100%
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		z-index -1
+
+	ul
+		li
+			display: inline-block
+			vertical-align: middle
+			margin-right: 42px
+			font-size: 1.375rem
+			color: #000
+			text-transform: uppercase
+			letter-spacing: 0.02em
+
+			i
+				font-size: 2rem
+				color: dark-color
+				margin-right: 16px
+		
+/* Inner Page */
+.b2-ip-banner
+	position relative
+
+	canvas
+		display: block
+		width 100%
+		min-height: 200px
+		background-image: innerpage-banner
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: bottom center
+		background-color: accent-color
+
+h1.entry-title
+	font-size: 4rem
+	text-transform: uppercase
+
+/* IP Products */
+.ip-ecom-products
+	.ip-ecom-products-list
+		position relative
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		list-style none
+		margin: 0
+		padding: 0
+
+		> li
+			width 33.33%
+			margin-bottom: 24px
+
+		.ip-ecom-products-item
+			&:hover
+				.ip-ecom-products-item-img
+					img
+						opacity .1
+
+					.ip-ecom-products-item-options
+						top: 50%
+						opacity 1
+
+			.ip-ecom-products-item-img
+				position relative
+
+				> a
+					display block
+
+					img
+						object-fit: cover
+						object-position: center
+						margin: 0 auto
+						max-height: 215px
+						transition: all .4s ease-in-out
+
+				.ip-ecom-products-item-options
+					position absolute
+					top: 60%
+					left: 0
+					transform: translateY(-50%)
+					width 100%
+					padding: 0
+					margin: 0
+					list-style none
+					text-align: center
+					opacity 0
+					transition: all .4s ease-in-out
+
+					li
+						display: inline-block
+						vertical-align: top
+
+						a
+							display: flex
+							justify-content: center
+							align-items: center
+							width: 32px
+							height: 32px
+							color: #000
+							border: 1px solid #000
+
+			.ip-ecom-products-item-dets
+				h4
+				h5
+					margin: 0
+
+				h5
+					font-family: subheading-font
+					font-style: italic
+					text-transform: capitalize
+
+				div
+					display: flex
+					justify-content: center
+
+				p
+					font-size: 24px
+					font-weight: 700
+					margin: 16px 6px
+
+					&.striked
+						text-decoration: line-through
+						font-weight: 300
+						opacity: .7
+
+/* Product Details */
+.ecom-pd-bc
+	padding 2px 0
+	background-color: #EFEFEF
+	margin-bottom: 122px
+
+	p#breadcrumbs
+		max-width: 85.31%
+		margin: 16px auto
+		padding: 0 15px
+		
+.ecom-pd-dets
+	position relative
+	padding: 165px 0 32px
+
+	.ecom-pd-dets-gallery-main-slide-wrap
+		position relative
+		margin-bottom: 8px
+
+		.ecom-pd-dets-gallery-main-item
+			display: block
+			position relative
+			pointer-events: none
+
+			img
+				object-fit: contain
+				object-position: center
+				width: 100%
+				height: 680px
+				background-color: #f3f3f3
+
+	.ecom-pd-dets-gallery-thumb-slide-wrap
+		position relative
+
+		.slick-current.slick-active
+			.ecom-pd-dets-gallery-thumb-item
+				border-color #000
+
+		.ecom-pd-dets-gallery-thumb-item
+			display: block
+			position relative
+			padding: 8px
+			border: 1px solid transparent
+
+			img
+				object-fit: contain
+				object-position: center
+				width: 100%
+				height: 164px
+				background-color: #f3f3f3
+
+	.ecom-pd-dets-txt
+		position relative
+		margin-top: 50px
+
+		h1
+			margin-bottom: 0
+			font-weight: 300
+
+		h1 + p
+			font-size: 1.5rem
+			font-style: italic
+			margin-top: 0
+
+		p
+			font-family: subheading-font
+			font-size: 1.125rem
+
+		div
+			display: flex
+			align-items: center
+
+			p
+				font-size: 3rem
+				margin-right: 12px
+
+				&.striked
+					opacity .6
+					font-size: 2rem
+					text-decoration: line-through
+
+		.ecom-pd-dets-txt-price
+			font-size: 3rem
+
+		.ecom-pd-dets-stock
+			font-size: 1.5rem
+			color: accent-color
+
+		.ecom-pd-dets-vars
+			font-size: 1rem
+			width 154px
+			height: 52px
+
+		.ecom-pd-controls
+			display: flex
+			align-items: center
+			justify-content: space-between
+			max-width: 355px
+
+			.ecom-pd-qty
+				display: flex
+
+				button
+				input
+					display: flex
+					align-items: center
+					justify-content: center
+					font-family: paragraph-font
+					font-size: 1.125rem
+					width 52px
+					height: 52px
+					background-color: #fff
+					border: 1px solid #000
+					cursor: pointer
+
+				button
+					transition all .4s ease-in-out
+
+					&:hover
+						color: #fff
+						background-color: accent-color
+
+				input
+					text-align: center
+					margin: 0 -1px
+
+			.ecom-pd-addtocart
+				display: block
+				font-family: paragraph-font
+				font-size: 1rem
+				color: #fff
+				letter-spacing: 0.1em
+				text-align: center
+				text-transform: uppercase
+				background-color: accent-color
+				width 175px
+				height: 50px
+				cursor: pointer
+				border: 1px solid accent-color
+				transition all .4s ease-in-out
+
+				&:hover
+					color: accent-color
+					background-color: #fff
+
+		.ecom-pd-addtowish
+			display block
+			font-family: subheading-font
+			font-style: italic
+			color: inherit
+			margin: 32px 0
+
+		.ecom-pd-info
+			padding: 0
+			margin: 0
+			list-style: none
+
+			span
+				display: inline-block
+				vertical-align: middle
+				padding: 4px 8px
+				background-color: #d9d9d9
+				border-radius 3px
+				margin-right 4px
+
+			li
+				letter-spacing: 0.1em
+				text-transform: uppercase
+				margin-bottom: 12px
+	
+.ecom-pd-tab
+	padding: 0
+
+	.ecom-pd-tab-control
+		padding: 0
+		margin: 0 0 16px
+		list-style: none
+
+		li
+			display: inline-block
+			vertical-align: top
+			margin-right: 12px
+
+			a
+				display: block
+				font-size: 1.125rem
+				color: #000
+				text-align: center
+				padding: 16px
+				border: 1px solid #000
+				opacity .5
+
+				&.active-control
+					opacity 1
+
+	.ecom-pd-tab-panel
+		display: none
+		min-height: 180px
+
+		&.active-panel
+			display: block
+
+		.ecom-pd-reviews
+			padding: 0
+			margin: 0
+			list-style: none
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+
+			> li
+				width: 50%
+
+				.ecom-pd-reviews-item
+					display: flex
+
+					img
+						object-fit: cover
+						object-position: center
+						max-width: initial
+						width: 100px
+						height: 100px
+						margin-right: 16px
+
+					.rating
+						padding: 0
+						margin: 0 0 8px
+						list-style: none
+						
+						li
+							display: inline-block
+							vertical-align: top
+							font-size: 1.125rem
+							color: #000
+							margin-right: 4px
+
+					p
+						font-family: subheading-font
+						margin: 0 0 8px
+
+.wpcf7-not-valid-tip
+	top: 0 !important
+	left: 0 !important
+	width: 100% !important
+	font-size: 16px
+
+.wpcf7-response-output
+	margin: 0 !important
+	font-size: 16px
+	color: #000
+	text-align: center
+
+.add_to_cart_button + a
+.widget.woocommerce.widget_shopping_cart
+.woocommerce-cart ul#site-header-cart
+.woocommerce-cart header .header-main .header-links li i
+	display: none !important
+
+.woocommerce-cart .woocommerce
+	display: flex
+	flex-wrap: wrap
+
+	.woocommerce-notices-wrapper
+		width: 100%
+
+	form.woocommerce-cart-form
+		width: 70%
+		padding: 0 15px
+
+	.cart-collaterals
+		width: 30%
+		padding: 0 15px
+
+	.woocommerce-message
+	.woocommerce-info
+	.woocommerce-error
+	.woocommerce-noreviews
+	p.no-comments
+		color: #fff
+		padding: 12px
+		margin-left: 0
+		margin-bottom: 30px
+
+		a
+			color: inherit
+			text-decoration: underline
+
+	table
+		thead
+			color: #fff
+			background: #412624
+			
+			th
+				text-align: center
+				padding: 10px
+
+		tbody
+			td.product-remove a
+				color: #fff
+				display: flex
+				width: 30px
+				height: 30px
+				align-items: center
+				justify-content: center
+				background: #eb9e99
+				border-radius: 50%
+				margin: 0 auto
+
+			td.product-name a
+				color: #000
+				text-decoration underline
+
+			td.product-quantity input
+				display block
+				text-align: center
+				width 60px
+				height: 32px
+				margin: 0 auto
+
+			tr:not(.cart_item)
+				td
+					position: relative
+
+					.coupon
+						max-width: 50%
+
+						input
+							height: 52px
+							margin-bottom: 6px
+
+						button
+							float: none
+							position: relative
+							top: 0
+							left: 0
+							width: 100%
+
+					button
+						float: right
+						position: absolute
+						right: 6px
+						top: 6px
+
+	.shipping-calculator-form
+		padding: 0
+
+		button
+			position: relative !important
+			top: 0 !important
+			right: 0 !important
+			float: none !important
+
+	.cart_totals
+		h2
+			display: none
+
+		th
+			color: #fff
+			padding: 10px
+			background: #412624
+			border: 1px solid #000
+
+.woocommerce-checkout
+	.woocommerce-form-coupon-toggle
+		display: none
+
+	div#customer_details
+		display: flex
+		justify-content: center
+		margin: 0 -15px
+		
+		> div
+			width: 50%
+			padding: 0 15px
+
+	#order_review
+		max-width: 50%
+		padding-right: 15px
+		padding-bottom: 82px
+		margin-top: 15px
+
+		tfoot tr th
+			text-align: right
+		
+		tfoot tr th,
+		tfoot tr td
+			padding: 10px
+			border: 1px solid #d3d3d3
+
+			#shipping_method
+				list-style none
+				padding: 0
+				margin: 0
+
+	table
+		thead
+			color: #fff
+			background: #412624
+			
+			th
+				text-align: center
+				padding: 10px
+
+		tbody
+			td.product-remove a
+				color: #fff
+				display: flex
+				width: 30px
+				height: 30px
+				align-items: center
+				justify-content: center
+				background: #eb9e99
+				border-radius: 50%
+				margin: 0 auto
+
+			td.product-name a
+				color: #000
+				text-decoration underline
+
+			td.product-quantity input
+				display block
+				text-align: center
+				width 60px
+				height: 32px
+				margin: 0 auto
+
+			tr:not(.cart_item)
+				td
+					position: relative
+
+					.coupon
+						max-width: 50%
+
+						input
+							height: 52px
+							margin-bottom: 6px
+
+						button
+							float: none
+							position: relative
+							top: 0
+							left: 0
+							width: 100%
+
+					button
+						float: right
+						position: absolute
+						right: 6px
+						top: 6px
+
+	.wc_payment_methods.payment_methods
+		padding: 0
+		
+		li
+			label
+				font-size 18px
+				font-weight: 700
+
+			.payment_box.payment_method_cod
+				margin-top: -10px
+
+.floating-notice
+	display: none
+	color: #fff
+	position: fixed
+	right: 24px
+	bottom: 24px
+	padding: 16px 40px 16px 16px
+	background: #006b3a
+	z-index: 101
+
+	a
+		color: #fff
+		position: absolute
+		right: 14px
+		top: 50%
+		transform: translateY(-50%)
+
+	p
+		margin: 0
+
+.wc-empty-cart-message
+	width 100%
+
+/* Gravity Forms: Dynamics 365 Testing */
+div#gf_progressbar_wrapper_3
+.gform_wrapper.gravity-theme .instruction
+	display: none !important
+
+div#input_3_7
+div#input_3_10
+div#input_3_12
+div#input_3_14
+	display: flex
+	
+	.gchoice
+		position: relative
+		width: 50%
+		cursor: pointer
+
+		input
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			cursor: pointer
+			opacity: 0
+
+		label
+			display: block
+			font-size: 18px
+			text-align: center
+			width: 100%
+			max-width: 100%
+			padding: 16px
+			border: 1px solid #000
+			cursor: pointer
+			
+		input:checked + label
+			color: #fff
+			background: #412624
