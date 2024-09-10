@@ -151,7 +151,7 @@
 								<p>Free shipping on national orders of $100+</p>
 							</div>
 							<div class="b2-col col-2 b2-text-right">
-								<a href="https://www.b2me.marketing/" title="Return to B2Me Marketing" class="b2-text-white">Return to B2Me Marketing</a>
+								<!-- <a href="https://www.b2me.marketing/" title="Return to B2Me Marketing" class="b2-text-white">Return to B2Me Marketing</a> -->
 							</div>
 						</div>
 					</div>
